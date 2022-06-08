@@ -91,8 +91,7 @@ const styles = StyleSheet.create({
   buttonText: {
     // backgroundColor: "red",
     borderRadius: 150,
-    color: "white",
-    fontWeight: "bold",
+    color: "black",
     fontSize: 20,
   },
 });
