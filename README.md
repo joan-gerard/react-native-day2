@@ -25,6 +25,6 @@ Once the dependencies are installed, run the server:
 
 ### `npm start`
 
-Open [http://localhost:19002](http://localhost:19002) to view de developer tool in the browser.
+Open [http://localhost:19002](http://localhost:19002) to view the developer tool in the browser.
 
 On the developer tool you can choose to run the app on iOS or Android simulator, or in the web browser
