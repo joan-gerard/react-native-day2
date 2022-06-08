@@ -2,7 +2,10 @@
 
 ## The app
 
-Contact List
+Customer List
+
+* The user is able to view a list of customers on the Home screen
+* The user is able to click on a name and navigate to another screen to view more details about the selected customer
 
 ## Learning objectives
 
