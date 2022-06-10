@@ -2,21 +2,36 @@ import {
   Text,
   FlatList,
   View,
-  Button,
   StyleSheet,
   Image,
   SafeAreaView,
   Pressable,
+  TouchableOpacity,
 } from "react-native";
 import { useState } from "react";
 import customer from "../customer/customer.js";
+import { auth } from "../firebase-config.js";
 
 const Home = ({ navigation }) => {
-  const [customerState, setcustomeState] = useState(customer);
+  const [customerState, setcustomerState] = useState(customer);
+
+  const handleSignOut = () => {
+    auth
+      .signOut()
+      .then(() => {
+        navigation.replace("Login");
+      })
+      .catch((err) => alert(err.message));
+  };
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>List of Customers</Text>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.signOutButton} onPress={handleSignOut}>
+          <Text style={styles.signOutButtonText}>Sign out</Text>
+        </TouchableOpacity>
+      </View>
+      <Text style={{ marginVertical: 10 }}>List of Customers</Text>
       <FlatList
         testID="flatlist"
         style={styles.FlatList}
@@ -53,6 +68,20 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     backgroundColor: "#F3FBFB",
+  },
+  buttonContainer: {
+    left: 140,
+  },
+  signOutButton: {
+    backgroundColor: "#0782F9",
+    width: "100%",
+    padding: 6,
+    borderRadius: 10,
+  },
+  signOutButtonText: {
+    color: "white",
+    fontWeight: "700",
+    fontSize: 16,
   },
   FlatList: {
     marginTop: 10,
