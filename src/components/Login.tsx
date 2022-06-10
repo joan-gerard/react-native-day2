@@ -7,7 +7,7 @@ import {
   Text,
 } from "react-native";
 import React, { useEffect, useState } from "react";
-import { auth } from "../firebase-config";
+import { auth } from "../../firebase-config";
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");

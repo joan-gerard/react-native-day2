@@ -9,8 +9,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useState } from "react";
-import customer from "../customer/customer.js";
-import { auth } from "../firebase-config.js";
+import customer from "../../customer/customer.js";
+import { auth } from "../../firebase-config.js";
 
 const Home = ({ navigation }) => {
   const [customerState, setcustomerState] = useState(customer);
