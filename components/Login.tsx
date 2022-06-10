@@ -27,7 +27,6 @@ const Login = ({ navigation }) => {
       .createUserWithEmailAndPassword(email, password)
       .then((userCredentials) => {
         const user = userCredentials.user;
-        console.log("Registered with: ", user.email);
       })
       .catch((err: { message: string }) => alert(err.message));
   };
@@ -37,7 +36,6 @@ const Login = ({ navigation }) => {
       .signInWithEmailAndPassword(email, password)
       .then((userCredentials) => {
         const user = userCredentials.user;
-        console.log("Logged in with: ", user.email);
       })
       .catch((err: { message: string }) => alert(err.message));
   };

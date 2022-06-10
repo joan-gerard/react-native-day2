@@ -95,6 +95,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#BAE8E8",
     padding: 9,
     borderRadius: 50,
+    shadowColor: '#171717',
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.4,
+    shadowRadius: 1,
   },
   name: {
     marginRight: 60,
