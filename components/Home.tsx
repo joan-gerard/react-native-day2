@@ -17,8 +17,8 @@ const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <Text>List of Customers</Text>
-      {/* <View> */}
       <FlatList
+        testID="flatlist"
         style={styles.FlatList}
         keyExtractor={(item) => item.cell}
         data={customerState.customers}
@@ -35,14 +35,12 @@ const Home = ({ navigation }) => {
             <Pressable
               style={styles.button}
               onPress={() => navigation.navigate("Profile", { customer: item })}
-              //   title="See profile"
             >
               <Text style={styles.buttonText}>See Profile</Text>
             </Pressable>
           </View>
         )}
       />
-      {/* </View> */}
     </SafeAreaView>
   );
 };
@@ -51,20 +49,16 @@ export default Home;
 
 const styles = StyleSheet.create({
   container: {
-    // padding: 5,
     paddingTop: 15,
     flex: 1,
     alignItems: "center",
     backgroundColor: "#F3FBFB",
   },
   FlatList: {
-    // backgroundColor: "yellow",
     marginTop: 10,
   },
   customerContainer: {
     margin: 8,
-    // paddingLeft: 40,
-    // paddingRight: 40,
     flex: 1,
     justifyContent: "space-between",
     alignItems: "center",
@@ -86,12 +80,11 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#FFD803",
     borderRadius: 50,
-    padding: 15,
+    padding: 10,
   },
   buttonText: {
-    // backgroundColor: "red",
     borderRadius: 150,
     color: "black",
-    fontSize: 20,
+    fontSize: 15,
   },
 });

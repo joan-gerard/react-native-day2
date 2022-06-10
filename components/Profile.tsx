@@ -5,7 +5,7 @@ const Profile = ({ route }) => {
   const { customer } = route.params;
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <View style={styles.profile}>
         <Image style={styles.image} source={{ uri: customer.picture.large }} />
         <View>
@@ -39,13 +39,15 @@ const Profile = ({ route }) => {
 export default Profile;
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#F3FBFB",
+  },
   profile: {
     paddingTop: 50,
-    alignContent: 'center',
+    alignContent: "center",
     alignItems: "center",
     borderRadius: 50,
-    backgroundColor: 'blue',
-    margin: 30
+    margin: 30,
   },
   image: {
     width: 100,
